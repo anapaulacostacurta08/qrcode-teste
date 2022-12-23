@@ -14,7 +14,7 @@
             }
         );
         scanner.addListener('scan', function(content) {
-            alert('Registro: ' + content + ' - Data: '+ Date.now()) ;
+            alert('Registro: ' + content + ' - Data: '+ moment(now).format('YYYY-MM-DD HH:mm:ss')) ;
         });
         Instascan.Camera.getCameras().then(cameras => 
         {
