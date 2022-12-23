@@ -5,7 +5,7 @@
     <script type="text/javascript" src="./js/instascan.min.js" ></script>	
   </head>
   <body>
-    Leitor de QR Code
+    <h1> Registro de Entrada e Saída <h1><br>
     <video id="preview"></video>
     <script>
         let scanner = new Instascan.Scanner(
@@ -15,7 +15,7 @@
         );
         scanner.addListener('scan', function(content) {
             alert('Escaneou o conteudo: ' + content);
-            window.open(content, "_blank");
+            document.getElementById("textinput")
         });
         Instascan.Camera.getCameras().then(cameras => 
         {
@@ -26,6 +26,7 @@
             }
         });
     </script>
-
+    <h3> Últimos Registros: <h3>
+      <p id="text">Registro Idt:</p> 
  </body>
 </html>
