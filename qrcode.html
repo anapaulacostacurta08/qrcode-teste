@@ -8,6 +8,7 @@
     <h1> Registro de Entrada e Saída <h1><br>
     <video id="preview"></video>
     <script>
+        var now = new Date();
         let scanner = new Instascan.Scanner(
             {
                 video: document.getElementById('preview')
