@@ -15,7 +15,7 @@
         );
         scanner.addListener('scan', function(content) {
             alert('Escaneou o conteudo: ' + content);
-            document.getElementById("textinput")
+            document.getElementById("textinput") = content;
         });
         Instascan.Camera.getCameras().then(cameras => 
         {
