@@ -14,8 +14,7 @@
             }
         );
         scanner.addListener('scan', function(content) {
-            alert('Escaneou o conteudo: ' + content);
-            document.getElementById("textinput") = content;
+            alert('Registro: ' + content + ' - Data: '+ new Date(ano, mes, dia, hora, minuto, segundo, milissegundo)) ;
         });
         Instascan.Camera.getCameras().then(cameras => 
         {
@@ -26,7 +25,5 @@
             }
         });
     </script>
-    <h3> Últimos Registros: <h3>
-      <p id="text">Registro Idt:</p> 
  </body>
 </html>
