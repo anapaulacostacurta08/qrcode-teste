@@ -9,13 +9,14 @@
     <video id="preview"></video>
     <script>
         var now = new Date();
+        var dateStringWithTime = moment(now).format('YYYY-MM-DD HH:mm:ss');
         let scanner = new Instascan.Scanner(
             {
                 video: document.getElementById('preview')
             }
         );
         scanner.addListener('scan', function(content) {
-            alert('Registro: ' + content + ' - Data: '+ moment(now).format('YYYY-MM-DD HH:mm:ss')) ;
+            alert('Registro: ' + content + ' - Data: '+ dateStringWithTime) ;
         });
         Instascan.Camera.getCameras().then(cameras => 
         {
