@@ -21,11 +21,14 @@
         });
         Instascan.Camera.getCameras().then(cameras => 
         {
-            if(cameras.length > 0){
-                alert(cameras.length);
-                scanner.start(cameras[2]);
-            } else {
-                console.error("Não existe câmera no dispositivo!");
+            if(cameras.length=1){
+                scanner.start(cameras[0]);
+            }else{
+               if(cameras.length> 0){
+                    scanner.start(cameras[2]);
+                } else {
+                  console.error("Não existe câmera no dispositivo!");
+                }
             }
         });
     </script>
